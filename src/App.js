@@ -3,13 +3,16 @@ import { AddTask } from './components/AddTask';
 import { ShowTask } from './components/ShowTask';
 
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+  const [ tasklist, setTasklist ] = useState([]);
+
   return (
     <div className="App">
       <Header />
-      <AddTask />
-      <ShowTask />
+      <AddTask tasklist={tasklist} setTasklist={setTasklist} />
+      <ShowTask tasklist={tasklist} setTasklist={setTasklist} />
     </div>
   );
 }
