@@ -7,12 +7,18 @@ import { useState } from 'react';
 
 function App() {
   const [ tasklist, setTasklist ] = useState([]);
+  // perform action to individual element
+  const [ task, setTask ] = useState({});
 
   return (
     <div className="App">
       <Header />
-      <AddTask tasklist={tasklist} setTasklist={setTasklist} />
-      <ShowTask tasklist={tasklist} setTasklist={setTasklist} />
+      <AddTask 
+        tasklist={tasklist} 
+        setTasklist={setTasklist} 
+        task = { task }
+        setTask = { setTask }/>
+      <ShowTask tasklist={tasklist} setTasklist={setTasklist} task = {task} setTask = {setTask} />
     </div>
   );
 }
