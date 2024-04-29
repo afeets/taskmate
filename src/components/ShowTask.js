@@ -1,6 +1,7 @@
 import React from 'react';
 
 export const ShowTask = ({ tasklist, setTasklist, task, setTask }) => {
+  /* 
   const tasks = [
     {
       id: 10001,
@@ -17,7 +18,8 @@ export const ShowTask = ({ tasklist, setTasklist, task, setTask }) => {
       name: "Task C",
       time: "2:00:00 AM 9/14/2030",
     }
-  ];
+  ]; 
+  */
 
   const handleEdit = (id) => {
     const selectedTask = tasklist.find(task => task.id === id);
